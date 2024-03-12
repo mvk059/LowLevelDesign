@@ -1,14 +1,14 @@
 package pen;
 
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.base.Pen;
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.ink.BasicInk;
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.ink.Ink;
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.ink.decorator.ShiningInkDecorator;
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.ink.decorator.SparklingInkDecorator;
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.ink.decorator.WaterproofInkDecorator;
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.strategy.CapStrategy;
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.strategy.ClickButtonStrategy;
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.strategy.OpenCloseStrategy;
+import pen.base.Pen;
+import pen.ink.BasicInk;
+import pen.ink.Ink;
+import pen.ink.decorator.ShiningInkDecorator;
+import pen.ink.decorator.SparklingInkDecorator;
+import pen.ink.decorator.WaterproofInkDecorator;
+import pen.strategy.CapStrategy;
+import pen.strategy.ClickButtonStrategy;
+import pen.strategy.OpenCloseStrategy;
 
 public class PenClient {
 
@@ -33,12 +33,18 @@ public class PenClient {
 
         // Using the pens
         System.out.println("Using gel pen:");
+        gelPenWithCapAndBlueInk.open();
         gelPenWithCapAndBlueInk.write();
+        gelPenWithCapAndBlueInk.close();
 
         System.out.println("\nUsing ball pen:");
+        ballPenWithClickAndSparklingRedInk.open();
         ballPenWithClickAndSparklingRedInk.write();
+        ballPenWithClickAndSparklingRedInk.close();
 
         System.out.println("\nUsing fountain pen:");
+        fountainPenWithCapAndWaterproofShiningBlueInk.open();
         fountainPenWithCapAndWaterproofShiningBlueInk.write();
+        fountainPenWithCapAndWaterproofShiningBlueInk.close();
     }
 }

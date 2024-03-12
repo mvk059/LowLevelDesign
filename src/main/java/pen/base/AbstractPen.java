@@ -1,7 +1,7 @@
 package pen.base;
 
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.ink.Ink;
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.strategy.OpenCloseStrategy;
+import pen.ink.Ink;
+import pen.strategy.OpenCloseStrategy;
 
 /**
  * Provides a common foundation for pens, encapsulating shared attributes and behaviors.

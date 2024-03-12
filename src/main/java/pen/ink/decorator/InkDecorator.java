@@ -1,6 +1,6 @@
 package pen.ink.decorator;
 
-import scaler.module11_lld_3.day139_machine_coding_intro.pen.ink.Ink;
+import pen.ink.Ink;
 
 /**
  * InkDecorator serves as the base class for all ink decorators, following the Decorator Pattern.
