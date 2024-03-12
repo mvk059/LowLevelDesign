@@ -1,4 +1,4 @@
-# Pen Project
+# Design a Pen
 
 ## Scope
 This project aims to design a flexible, extensible, and clean object-oriented system to model different types of pens, their behaviors, and properties. It addresses the needs of creating various pen types with distinct mechanisms for opening and closing, as well as supporting different ink characteristics.
