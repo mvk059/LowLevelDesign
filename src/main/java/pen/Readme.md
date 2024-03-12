@@ -23,6 +23,9 @@ This project aims to design a flexible, extensible, and clean object-oriented sy
 * OpenCloseStrategy Interface: Enables the Strategy pattern for open/close behaviors.
 * Ink Interface and Decorators: Facilitate the Decorator pattern for extensible ink properties.
 
+## Class Diagram
+![Class Diagram](../../../../images/class_diagram.png)
+
 ## Main Method Example
 ### Input
 The Main class demonstrates creating various pen objects with different configurations:
