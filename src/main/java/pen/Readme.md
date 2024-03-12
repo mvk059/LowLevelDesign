@@ -30,26 +30,32 @@ This project aims to design a flexible, extensible, and clean object-oriented sy
 ### Input
 The Main class demonstrates creating various pen objects with different configurations:
 
-```
-Pen gelPenWithCapAndBlueInk = new GelPen("GelBrand", "GelModel1", 10.99, new CapStrategy(), new BasicInk("Blue"));
-Pen ballPenWithClickAndSparklingRedInk = new BallPen("BallBrand", "BallModel1", 8.99, new ClickButtonStrategy(), new SparklingInkDecorator(new BasicInk("Red")));
-Pen fountainPenWithCapAndWaterproofShiningBlueInk = new FountainPen("FountainBrand", "FountainModel1", 15.99, new CapStrategy(), new WaterproofInkDecorator(new ShiningInkDecorator(new BasicInk("Blue"))));
+```java
+public class PenClient {
 
-// Using the pens
-System.out.println("Using gel pen:");
-gelPenWithCapAndBlueInk.open();
-gelPenWithCapAndBlueInk.write();
-gelPenWithCapAndBlueInk.close();
+  public static void main(String[] args) {
+    
+    Pen gelPenWithCapAndBlueInk = new GelPen("GelBrand", "GelModel1", 10.99, new CapStrategy(), new BasicInk("Blue"));
+    Pen ballPenWithClickAndSparklingRedInk = new BallPen("BallBrand", "BallModel1", 8.99, new ClickButtonStrategy(), new SparklingInkDecorator(new BasicInk("Red")));
+    Pen fountainPenWithCapAndWaterproofShiningBlueInk = new FountainPen("FountainBrand", "FountainModel1", 15.99, new CapStrategy(), new WaterproofInkDecorator(new ShiningInkDecorator(new BasicInk("Blue"))));
 
-System.out.println("\nUsing ball pen:");
-ballPenWithClickAndSparklingRedInk.open();
-ballPenWithClickAndSparklingRedInk.write();
-ballPenWithClickAndSparklingRedInk.close();
+    // Using the pens
+    System.out.println("Using gel pen:");
+    gelPenWithCapAndBlueInk.open();
+    gelPenWithCapAndBlueInk.write();
+    gelPenWithCapAndBlueInk.close();
 
-System.out.println("\nUsing fountain pen:");
-fountainPenWithCapAndWaterproofShiningBlueInk.open();
-fountainPenWithCapAndWaterproofShiningBlueInk.write();
-fountainPenWithCapAndWaterproofShiningBlueInk.close();
+    System.out.println("\nUsing ball pen:");
+    ballPenWithClickAndSparklingRedInk.open();
+    ballPenWithClickAndSparklingRedInk.write();
+    ballPenWithClickAndSparklingRedInk.close();
+
+    System.out.println("\nUsing fountain pen:");
+    fountainPenWithCapAndWaterproofShiningBlueInk.open();
+    fountainPenWithCapAndWaterproofShiningBlueInk.write();
+    fountainPenWithCapAndWaterproofShiningBlueInk.close();
+  }
+}
 ```
 
 ### Output
