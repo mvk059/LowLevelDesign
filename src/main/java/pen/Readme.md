@@ -34,10 +34,24 @@ The Main class demonstrates creating various pen objects with different configur
 public class PenClient {
 
   public static void main(String[] args) {
-    
-    Pen gelPenWithCapAndBlueInk = new GelPen("GelBrand", "GelModel1", 10.99, new CapStrategy(), new BasicInk("Blue"));
-    Pen ballPenWithClickAndSparklingRedInk = new BallPen("BallBrand", "BallModel1", 8.99, new ClickButtonStrategy(), new SparklingInkDecorator(new BasicInk("Red")));
-    Pen fountainPenWithCapAndWaterproofShiningBlueInk = new FountainPen("FountainBrand", "FountainModel1", 15.99, new CapStrategy(), new WaterproofInkDecorator(new ShiningInkDecorator(new BasicInk("Blue"))));
+
+    // Basic Ink
+    Ink blueInk = new BasicInk("Blue");
+    Ink redInk = new BasicInk("Red");
+
+    // Decorated Inks
+    Ink shiningBlueInk = new ShiningInkDecorator(blueInk);
+    Ink sparkingRedInk = new SparklingInkDecorator(redInk);
+    Ink waterproofShiningBlueInk = new WaterproofInkDecorator(shiningBlueInk);
+
+    // Open/Close Strategies
+    OpenCloseStrategy capStrategy = new CapStrategy();
+    OpenCloseStrategy clickButtonStrategy = new ClickButtonStrategy();
+
+    // Creating pens with various configurations
+    Pen gelPenWithCapAndBlueInk = new GelPen("GelBrand", "Gel1", 10.0, capStrategy, blueInk);
+    Pen ballPenWithClickAndSparklingRedInk = new BallPen("BallBrand", "Ball1", 5.0, clickButtonStrategy, sparkingRedInk);
+    Pen fountainPenWithCapAndWaterproofShiningBlueInk = new FountainPen("FountainBrand", "Fountain1", 30.0, capStrategy, waterproofShiningBlueInk);
 
     // Using the pens
     System.out.println("Using gel pen:");
